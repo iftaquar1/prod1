@@ -1,4 +1,5 @@
 FROM tomcat
-COPY  /home/ec2-user/*.war /usr/local/tomcat/webapps
+WORKDIR /home/ec2-user/jenkins
+COPY  *.war /usr/local/tomcat/webapps
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
